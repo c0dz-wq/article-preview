@@ -40,14 +40,14 @@ body {
 .preview__card {
 	position: relative;
 	width: 335px;
-	height: 515px;
+	height: 510px;
 	background-color: hsl(0, 0%, 100%);
 	border-radius: 1em;
 	box-shadow: 0px 2px 10px 0px rgba(195, 208, 219, 0.40);
 }
 
 .preview__card--active {
-	height: calc(515px - 8px);
+	height: calc(515px - 18px);
 }
 
 @media screen and (min-width: 900px) {
@@ -59,20 +59,22 @@ body {
 	}
 }
 
-.inner__container {
+.info__container {
 	display: flex;
 	flex-direction: column;
-	padding: 3em 2.5em;
+	padding: 2.5em 2.5em 0em 2.5em;
 }
 
 @media screen and (min-width: 900px) {
-	.inner__container {
-		padding: 2.5em 2.8em;
+	.info__container {
+		padding: 2.5em 3em 0em 3em;
 	}
 }
 
 img.drawers {
+	display: block;
 	width: 335px;
+	max-width: 100%;
 	height: 200px;
 	border-radius: 1em 1em 0 0;
 	object-fit: cover;
@@ -91,7 +93,6 @@ img.drawers {
 h3 {
 	font-size: 1.05rem;
 	color: var(--Very-Dark-Grayish-Blue);
-	max-width: 20em;
 	margin-bottom: .8em;
 }
 
@@ -104,24 +105,24 @@ h3 {
 }
 
 .info {
-	font-family: sans-serif;
 	font-size: .86rem;
 	color: var(--Desaturated-Dark-Blue);
-	max-width: 19em;
-	margin-bottom: 2em;
+	max-width: 19.8em;
+	margin-bottom: 2.5em;
 	line-height: 1.5em
 }
 
 @media screen and (min-width: 900px) {
 	.info {
 		font-size: .85rem;
-		max-width: 25.8em;
+		max-width: 26.5em;
+		margin-bottom: 1.5em;
 	}
 }
 
 .avatar__container {
 	position: relative;
-	max-width: 310px;
+	height: 4em;
 }
 
 img.avatar {
@@ -152,7 +153,7 @@ img.avatar {
 
 .share__btn {
 	position: absolute;
-	bottom: 3.3em;
+	bottom: 1.50em;
 	right: 0;
 	background-color: var(--Light-Grayish-Blue);
 	border: 0px solid transparent;  
@@ -172,9 +173,9 @@ img.avatar {
 
 @media screen and (min-width: 900px) {
 	.share__btn {
-		right: -4em;
+		bottom: 1.2em;
 	}
-	
+
 	.share__btn--active {
 		background-color: var(--Desaturated-Dark-Blue);
 		color: #FFF;
@@ -196,11 +197,11 @@ img.avatar {
 @media screen and (min-width: 900px) {
 	.social__container::before {
 		content: '';
-		border: 20px solid transparent;
+		border: 12px solid transparent;
 		border-top-color: var(--Very-Dark-Grayish-Blue); 
 		transform: translateY(100%);
 		position: relative;
-		left: 40%;
+		left: 45%;
 	}
 
 	.social__inner {
@@ -212,7 +213,6 @@ img.avatar {
 .social--active {
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	position: absolute;
 	bottom: 0;
 	background-color: var(--Very-Dark-Grayish-Blue);
@@ -229,7 +229,7 @@ img.avatar {
 		width: 250px;
 		top: 9.9em;
 		right: 14em;
-		transform: translate(100%);
+		transform: translateX(100%);
 	}
 }
 
@@ -251,7 +251,8 @@ img.avatar {
 .icon-facebook, 
 .icon-twitter, 
 .icon-pinterest {
-	margin-left: -2.5em;
+	margin-right: -.6em;
+	margin-left: -2em;
 }
 
 .icon-twitter {
